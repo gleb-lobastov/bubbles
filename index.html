@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.min.js"></script>
+	<script src="data/plugins/jquery.easing.1.3.js"></script>
+	<script src="data/bubbles.js"></script>
+	<link href="data/bubbles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+   <header>
+      <h1>Сортировка пузырьком</h1>
+   </header>
+	<section class="content-box">
+		<div id="bubble-flow">
+			<ul id="bubbles"> <!--letsGo('random')" -->
+				<li 
+					class="bubble morph-spacer larger" 
+					onclick="letsGo('random')"			
+					title="Сортировка случайных чисел"
+				>
+					?
+				</li>
+			</ul>
+		</div>
+		<div class="information">
+			<div id="controls">
+				<h2>Про что?</h2>
+				<article class="how-it-works small">
+					<p>
+					Эта страница научно-популярная. Наглядно об одном из любимых
+               занятий любого компьютера &mdash; сортировке
+               <a href="ru.wikipedia.org/wiki/Массив_(программирование)" title="Массив &mdash; это область памяти, где информация представленна в виде списка. Преимущество такого списка в последовательной нумерации. Что-бы узнать, содержание пункта, достаточно запомнить его номер, по другому называемый индексом. Это похоже на банковские ячейки или камеры хранения багажа">
+						массивов
+					</a> &mdash; списков данных, в нашем случае чисел.
+					</p><p>
+					Когда вы нажмете кнопку, пробирку справа заполнят пузырьки воздуха. 
+               Конечно, это аналогия. Но очень наглядная. Самая простая сортировка, о которой 
+               идет речь, так и зовется &mdash; пузырьковой.
+               </p><p>               
+               На каждом пузырьке будет &mdash; число,
+               примем его за меру плотности. Задача алгоритма - упорядочить числа по возрастанию
+               или пузырьки по способности всплыть быстрее всех.
+					</p>
+				</article>
+				<div class="input-area">
+					<h2>Как включить?</h2>
+					<p class="small">Введите до 7 чисел, через пробел, максимальное число &mdash; 999 или выберите "Случайные числа". </p>
+					<textarea id="userInput" onkeyup="tools.validateUserInput()" placeholder="сгенерировать случайным образом"></textarea>
+					<input type="button" id="ok" onclick="letsGo()" value="Вперед">
+					<input type="button" onclick="letsGo('random')" value="Случайные числа">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer><a href="http://vk.com/gleb.lobastov">Lobastov Gleb, 2014</a></footer>
+</body>
+</html>
