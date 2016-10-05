@@ -1,2 +1,2 @@
 # bubbles
-Тестовое задание в Тензор
+Test task for Tensor ([live](https://gleb-lobastov.github.io/bubbles/))
